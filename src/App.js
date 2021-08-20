@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
+import BoardComponent from './component/BoardComponent';
+import BoardDetail from './component/BoardDetail';
+import { BrowserRouter, Route } from 'react-router-dom';
+import BoardModify from './component/BoardModify';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return(
+      <div>
+        <h2 className="board-view-menu" align="center">Notice</h2>
+        <br/>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Route exact path='/' component={BoardComponent}/>
+          <Route path='/boardDetail/:no' component={BoardDetail}/>
+          <Route path='/boardModify/:no' component={BoardModify}/>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
 export default App;
+

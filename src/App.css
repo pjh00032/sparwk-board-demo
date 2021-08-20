@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+.pagination { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 15px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul { 
+    list-style: none; 
+    padding: 0; 
+} 
+
+ul.pagination li { 
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1rem; 
+} 
+
+ul.pagination li a { 
+    text-decoration: none; 
+    color: #010407; 
+    font-size: 1rem; 
+    font-weight: bold;;
+} 
+
+ul.pagination li.active a { 
+    color: white; 
+} 
+
+ul.pagination li.active { 
+    background-color: #337ab7;
+} 
+
+ul.pagination li a:hover, ul.pagination li a.active { 
+    color: blue; 
+} 
+
+.page-selection { 
+    width: 48px; 
+    height: 30px; 
+    color: #337ab7; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*board*/
+.board-list-page{
+    height: 30px;
+    margin-top: -20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.board-view-menu {
+    width: 50%;
+    margin: 15px auto;
+    text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.board-view-wrapper, .board-list-wrapper{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-list-table{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.board-list-table thead{    
+    font-weight: bold;
+    background: rgb(243, 238, 238);
+    text-align: center;
+    font-size: 1.1rem;
+    height: 50px;
+}
+
+.board-list-table{
+    empty-cells: hide;
+    border-collapse: collapse;
+}
+
+.board-list-table td{
+    padding: 10px;
+    border: 0.8px solid #beb8b8;
+}
+
+.board-list-table tbody td:first-child{
+    width: 10%;
+    text-align: center;
+}
+
+.board-list-table tbody td:nth-child(2){
+    width: 66%;
+    text-align: left;
+}
+
+.board-list-table tbody td:nth-child(3), .board-list-table tbody td:nth-child(4){
+    width: 12%;
+    text-align: center;
+}
+
+
+.board-view-title {
+    height: 50px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.board-view-title span{
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.board-view-title > span:first-child {
+    width: 71%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.board-view-title > span:nth-child(3) {
+    width: 5%;
+}
+
+.board-view-contents{
+    display: inline-block;
+    height: 500px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.board-view-contents div{
+    margin: 10px;
+}
+
+.board-view-bottom-list, .board-view-bottom-list-now{
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+.board-view-bottom-list-now{
+    background: rgb(243, 238, 238);
+}
+
+.board-view-bottom-list span, .board-view-bottom-list-now span{
+    margin: 10px;
+    display: inline-block;
+}
+
+.board-view-bottom-list span:first-child, .board-view-bottom-list-now span:first-child{
+    width: 5%;
+    color: #beb8b8;
+    margin-left: 10px;
+}
+
+.board-view-bottom-list span:nth-child(2), .board-view-bottom-list-now span:nth-child(2){
+    width: 64.4%;
+    text-align: left;
+}
+
+.board-view-bottom-list span:nth-child(4), .board-view-bottom-list-now span:nth-child(4){
+    width: 5%;
+    text-align: center;
+}
+
+.board-view-btn{
+    margin: 15px auto;
+}
+
+.board-view-btn button{
+    border: 0;
+    padding: 7px;
+    width: 100px;    
+}
+
+.board-view-btn span button{
+    float: right;
+    margin-left: 3px;
 }
